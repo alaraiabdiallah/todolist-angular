@@ -1,0 +1,11 @@
+<div class="date-nav">
+  <a routerLink="/todos/{{ previousDate.format('YYYY-MM-DD') }}">&laquo; Previous</a>
+  <a (click)="onClickDateHandler()">
+    <span *ngIf="!isDateEditable">{{ currentDate.format("dddd, DD MMM YYYY") }}</span>
+    <div *ngIf="isDateEditable">
+<input type="date" class="datepicker" #datePicker (change)="onDateChange(datePicker.value)"
+  value="{{ currentDate.format('YYYY-MM-DD') }}">
+    </div>
+  </a>
+  <a routerLink="/todos/{{ nextDate.format('YYYY-MM-DD') }}">Next &raquo;</a>
+</div>

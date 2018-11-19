@@ -1,0 +1,42 @@
+.todo-title{
+    float:left;
+    font-size: 18pt;
+}
+
+.todo-action{
+    float: right;
+}
+
+.todo-action, .todo-button-bar{
+    position: relative;
+    top: 5px;
+}
+
+.todo-button-bar{
+    text-align:right;
+}
+
+
+.todo-input{
+    width: 100%;
+    font-size: 16pt;
+    background:transparent;
+    color: #ddd;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    margin: 0;
+}
+
+button{
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 6px 8px;
+    margin: 0 2px;
+    color: #ccc;
+    &:hover{
+        background: #ccc;
+        color: #2c3e50;
+    }
+}

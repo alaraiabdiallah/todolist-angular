@@ -1,0 +1,20 @@
+<div *ngIf="!edited">
+    <div class="todo-title">{{ todo.title }}</div>
+    <div class="todo-action"><input type="checkbox" (click)="setDone(todo)" [(ngModel)]="todo.done"></div>
+    <div style="clear:both"></div>
+</div>
+
+<div *ngIf="edited" class="grid-container">
+    <div class="grid-item1-6">
+    <input type="text" class="todo-input" #todoTitle 
+        [attr.autofocus]="edited" 
+        (keyup.enter)="save(todoTitle.value)"
+        [attr.value]="todo.title">
+    </div>
+    <div class="grid-item todo-button-bar">
+        <button (click)="save(todoTitle.value)"><i class="fas fa-check"></i></button>
+        <button (click)="deleteTodo(todo)"><i class="fas fa-trash"></i></button>
+        <button (click)="onCancelEdit(todo)"><i class="fas fa-times"></i></button>
+    </div>
+    <div style="clear:both"></div>
+</div>

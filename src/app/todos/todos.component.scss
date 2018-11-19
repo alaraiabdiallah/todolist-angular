@@ -1,0 +1,59 @@
+ul{
+    list-style-type: none;
+    padding: 0;
+
+    li{
+        padding: 7px 10px;
+        background: #2c3e50;
+        color: #ddd;
+        border-bottom: 2px solid #304357;
+        cursor: pointer;
+        &:hover,&.selected{
+            background: #304357;
+        }
+
+        &.add-todo-list{
+            text-align:center;
+            padding: 15px 0;
+        }
+        
+        &:first-child{
+            border-radius: 8px 8px 0px 0px;
+        }
+
+        &:last-child {
+          border-radius: 0px 0px 8px 8px;
+        }
+    }
+}
+
+.todos-title{
+    background: #304357;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.todos-container{
+    padding: 0 25%;
+}
+
+@media(max-width:767px){
+    .todos-container {
+      padding: 0 20px;
+    }
+}
+@media(min-width:768px){
+    .todos-container {
+      padding: 0 50px;
+    }
+}
+@media(min-width:992px){
+    .todos-container {
+      padding: 0 15%;
+    }
+}
+@media(min-width:1200px){
+    .todos-container {
+      padding: 0 25%;
+    }
+}

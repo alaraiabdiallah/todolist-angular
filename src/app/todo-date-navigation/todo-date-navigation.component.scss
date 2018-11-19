@@ -1,0 +1,24 @@
+.date-nav{
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+
+    a{
+        text-align:center;
+        background: #2c3e50;
+        color: #ddd;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
+.datepicker{
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ddd;
+    font-family: 'Roboto';
+}

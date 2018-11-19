@@ -1,0 +1,15 @@
+<div class="todos-container">
+    <h2 class="todos-title">Todos</h2>
+    <app-todo-date-navigation [dateContext]="currentDate"></app-todo-date-navigation>
+    <ul>
+      <li *ngFor="let todo of todos" 
+      (dblclick)="onDoubleClick(todo)">
+        <app-todo-item 
+        [todo]="todo" 
+        [edited]="editedTodo == todo" 
+        (onCancelEditItem)="onCancelEditHandler($event)"
+        (onDeleteItem)="onDeleteItemHandler($event)"></app-todo-item>
+      </li>
+      <li class="add-todo-list" (click)="add()"><i class="fas fa-plus"></i> Add New</li>
+    </ul>
+</div>
